@@ -1,0 +1,6 @@
+Sunday: 0
+Monday: 1
+Tuesday: 2
+StatusOK: 200
+StatusCreated: 201
+StatusAccepted: 202

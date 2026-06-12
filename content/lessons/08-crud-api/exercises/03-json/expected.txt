@@ -1,0 +1,2 @@
+{"id":1,"name":"Alice","email":"alice@example.com"}
+Name: Bob, Email: bob@example.com

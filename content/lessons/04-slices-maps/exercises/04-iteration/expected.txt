@@ -1,0 +1,6 @@
+0: apple
+1: banana
+2: cherry
+1 = one
+2 = two
+3 = three

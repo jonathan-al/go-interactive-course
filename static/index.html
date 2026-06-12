@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Go Tutorial</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/dracula.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="app">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h1>Go Tutorial</h1>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <span class="progress-text" id="progressText">0% complete</span>
+            </div>
+            <nav class="lessons-nav" id="lessonsNav"></nav>
+        </aside>
+
+        <main class="content">
+            <div class="content-header">
+                <button class="menu-toggle" id="menuToggle">&#9776;</button>
+                <h2 id="currentTitle">Welcome</h2>
+            </div>
+
+            <div class="lesson-content" id="lessonContent">
+                <div class="welcome">
+                    <h1>Welcome to the Interactive Go Tutorial</h1>
+                    <p>Select a lesson from the sidebar to get started.</p>
+                    <p>Each lesson includes explanations and hands-on exercises where you write Go code and get instant feedback.</p>
+                </div>
+            </div>
+
+            <div class="exercise-section" id="exerciseSection" style="display:none;">
+                <div class="exercise-header">
+                    <h3 id="exerciseTitle"></h3>
+                    <select id="exerciseSelect"></select>
+                </div>
+                <div class="exercise-description" id="exerciseDescription"></div>
+                <div class="editor-container">
+                    <textarea id="codeEditor"></textarea>
+                </div>
+                <div class="actions">
+                    <button class="btn btn-run" id="runBtn">Run Code</button>
+                    <button class="btn btn-reset" id="resetBtn">Reset</button>
+                    <span class="status" id="status"></span>
+                </div>
+                <div class="output-section" id="outputSection" style="display:none;">
+                    <div class="output-panel">
+                        <h4>Your Output</h4>
+                        <pre id="actualOutput"></pre>
+                    </div>
+                    <div class="output-panel">
+                        <h4>Expected Output</h4>
+                        <pre id="expectedOutput"></pre>
+                    </div>
+                </div>
+                <div class="error-section" id="errorSection" style="display:none;">
+                    <h4>Error</h4>
+                    <pre id="errorOutput"></pre>
+                </div>
+                <div class="nav-buttons">
+                    <button class="btn btn-nav" id="prevBtn" disabled>Previous</button>
+                    <button class="btn btn-nav" id="nextBtn">Next</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/go/go.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/edit/closebrackets.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/edit/matchbrackets.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+</html>

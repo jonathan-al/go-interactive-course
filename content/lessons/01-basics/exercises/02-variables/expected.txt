@@ -1,0 +1,4 @@
+Name: Alice
+Age: 30
+Height: 1.68
+Student: true

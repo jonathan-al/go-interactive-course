@@ -1,0 +1,4 @@
+a: type=int, value=42
+b: type=float64, value=3.14
+c: type=string, value=Hello
+d: type=bool, value=true

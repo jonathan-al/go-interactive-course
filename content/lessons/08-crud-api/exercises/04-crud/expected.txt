@@ -1,0 +1,4 @@
+POST /users -> Status: 201
+Created: {"id":1,"name":"Alice","email":"alice@example.com"}
+GET /users/1 -> Status: 200
+User: {"id":1,"name":"Alice","email":"alice@example.com"}

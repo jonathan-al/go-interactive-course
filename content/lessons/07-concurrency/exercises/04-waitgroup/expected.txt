@@ -1,0 +1,5 @@
+ID: 1, Value: 1
+ID: 2, Value: 8
+ID: 3, Value: 27
+ID: 4, Value: 64
+ID: 5, Value: 125

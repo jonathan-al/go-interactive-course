@@ -1,0 +1,5 @@
+Width: 5.00, Height: 3.00
+Area: 15.00
+After scaling by 2.00:
+Width: 10.00, Height: 6.00
+Area: 60.00

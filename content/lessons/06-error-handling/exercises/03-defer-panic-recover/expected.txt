@@ -1,0 +1,3 @@
+Recovered: division by zero
+10 / 0 = 0
+10 / 2 = 5

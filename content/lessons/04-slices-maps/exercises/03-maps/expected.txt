@@ -1,0 +1,4 @@
+Alice: 30
+Bob: 25
+Charlie: 35
+Length after delete: 2

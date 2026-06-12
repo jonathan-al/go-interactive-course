@@ -1,0 +1,5 @@
+Name: Bob, Age: 25
+Score: 100
+Pi: 3.14
+Active: true
+Type of name: string
