@@ -4,6 +4,36 @@ let currentLesson = null;
 let currentExercise = null;
 let allExercises = [];
 
+// Marked@15 strips heading anchors by default, so the in-lesson table of
+// contents links (e.g. <a href="#1-hello-world">Hello World</a>) jump to
+// nothing. Install a renderer that writes a slug id on every heading so the
+// browser can actually scroll to them. Run once on first render.
+function ensureHeadingAnchors() {
+    if (window.__headingAnchorsInstalled) return;
+    window.__headingAnchorsInstalled = true;
+
+    const slugify = (raw) => {
+        if (!raw) return '';
+        return raw
+            .toString()
+            .toLowerCase()
+            .replace(/<[^>]+>/g, '')
+            .replace(/[^a-z0-9]+/g, '-')
+            .replace(/^-+|-+$/g, '');
+    };
+
+    marked.use({
+        renderer: {
+            heading(token) {
+                const level = token.depth;
+                const text = this.parser.parseInline(token.tokens);
+                const id = slugify(token.text);
+                return `<h${level} id="${id}">${text}</h${level}>\n`;
+            }
+        }
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     editor = CodeMirror.fromTextArea(document.getElementById('codeEditor'), {
         mode: 'go',
@@ -118,6 +148,7 @@ async function loadExercise(lessonId, exerciseId) {
     const lessonMD = await lessonRes.text();
     const exData = await exRes.json();
 
+    ensureHeadingAnchors();
     document.getElementById('lessonContent').innerHTML = marked.parse(lessonMD);
     document.getElementById('exerciseDescription').innerHTML = marked.parse(exData.exercise);
     document.getElementById('currentTitle').textContent = `${lessonId} / ${exerciseId}`;
