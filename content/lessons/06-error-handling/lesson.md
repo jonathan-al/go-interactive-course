@@ -1,4 +1,4 @@
-# Lesson 6: Error Handling
+# Lesson 06: Error Handling
 
 Go takes a unique approach to error handling. Instead of exceptions, Go uses explicit return values to signal failures. This makes error handling visible, predictable, and straightforward.
 

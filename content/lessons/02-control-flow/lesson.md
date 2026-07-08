@@ -1,4 +1,4 @@
-# Control Flow in Go
+# Lesson 02: Control Flow in Go
 
 Control flow statements allow your program to make decisions and repeat actions. In this lesson, you'll learn about **if/else**, **switch**, and **for** loops in Go.
 

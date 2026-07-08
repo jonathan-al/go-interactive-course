@@ -1,4 +1,4 @@
-# Lesson 3: Functions
+# Lesson 03: Functions
 
 Functions are the building blocks of any Go program. They let you group reusable logic, accept inputs, and return outputs.
 
